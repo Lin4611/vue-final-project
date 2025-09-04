@@ -10,17 +10,13 @@
                 <h2 class="formControls_txt">註冊帳號</h2>
                 <label class="formControls_label">Email</label>
                 <input class="formControls_input" type="email" placeholder="請輸入 email" v-model="signupFields.email" @blur="validateEmail" required>
-                {{signupFields.email}}
                 <p v-if="emailError" class="text-danger">{{emailError}}</p>
                 <label class="formControls_label">您的暱稱</label>
                 <input class="formControls_input" type="text"  placeholder="請輸入您的暱稱" v-model="signupFields.nickname" required>
-                {{signupFields.nickname}}
                 <label class="formControls_label">密碼</label>
                 <input class="formControls_input" type="password" placeholder="請輸入密碼" v-model="signupFields.password" required>
-                {{signupFields.password}}
                 <label class="formControls_label">再次輸入密碼</label>
                 <input class="formControls_input" type="password" placeholder="請再次輸入密碼"  v-model="passwdcheck" required>
-                {{passwdcheck}}
                 <span v-if="signupFields.password !== passwdcheck">密碼不同，請重新輸入</span>
                 <input class="formControls_btnSubmit" type="submit" value="註冊帳號">
                 <RouterLink class="formControls_btnLink" to="/">登入</RouterLink>

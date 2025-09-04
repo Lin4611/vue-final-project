@@ -42,11 +42,9 @@ const Signin = async () =>{
           <h2 class="formControls_txt">最實用的線上代辦事項服務</h2>
           <label class="formControls_label">Email</label>
           <input class="formControls_input" type="email" placeholder="請輸入 email" v-model="signinFields.email" @blur="validateEmail" required>
-          {{signinFields.email}}
           <span v-if="emailError">{{ emailError }}</span>
           <label class="formControls_label">密碼</label>
           <input class="formControls_input" type="password" placeholder="請輸入密碼" v-model="signinFields.password" required>
-          {{signinFields.password}}
           <input class="formControls_btnSubmit" type="submit" value="登入">
           <RouterLink class="formControls_btnLink" to="/signup" >註冊帳號</RouterLink>
         </form>
